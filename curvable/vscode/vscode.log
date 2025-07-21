@@ -1,0 +1,49 @@
+
+> code-oss-dev@1.103.0 electron
+> node build/lib/electron
+
+[11:49:27] Synchronizing built-in extensions...
+[11:49:27] You can manage built-in extensions with the [36m--builtin[39m flag
+[11:49:27] [34m[github][39m ms-vscode.js-debug-companion@1.1.3 [32m✔︎[39m
+[11:49:27] [34m[github][39m ms-vscode.js-debug@1.102.0 [32m✔︎[39m
+[11:49:27] [34m[github][39m ms-vscode.vscode-js-profile-table@1.0.10 [32m✔︎[39m
+[13431:0721/114927.891649:WARNING:viz_main_impl.cc(85)] VizNullHypothesis is disabled (not a warning)
+[90m[main 2025-07-21T06:19:28.036Z][0m [CSS_DEV] DONE, 266 css modules (55ms)
+[90m[main 2025-07-21T06:19:28.096Z][0m update#setState disabled
+[13390:0721/114929.186757:INFO:CONSOLE(278)] "%c[Extension Host] %cdebugger listening on port 5870 color: blue color:", source: vscode-file://vscode-app/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/out/vs/workbench/services/extensions/electron-browser/localProcessExtensionHost.js (278)
+[13390:0721/114929.188880:INFO:CONSOLE(233)] "%c INFO color: #33f Started local extension host with pid 13436.", source: vscode-file://vscode-app/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/out/vs/platform/log/common/log.js (233)
+[13390:0721/114929.229489:INFO:CONSOLE(48)] "Overwriting extension <<copilot-instructions.md>> to now point to mime <<text/x-instructions>>", source: vscode-file://vscode-app/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/out/vs/editor/common/services/languagesAssociations.js (48)
+[13390:0721/114929.259698:INFO:CONSOLE(352)] "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.", source: vscode-file://vscode-app/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/out/vs/workbench/contrib/webview/browser/webviewElement.js (352)
+[13390:0721/114929.261064:INFO:CONSOLE(352)] "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.", source: vscode-file://vscode-app/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/out/vs/workbench/contrib/webview/browser/webviewElement.js (352)
+[13390:0721/114929.262123:INFO:CONSOLE(352)] "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.", source: vscode-file://vscode-app/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/out/vs/workbench/contrib/webview/browser/webviewElement.js (352)
+[13390:0721/114929.380325:INFO:CONSOLE(209)] "%c[Extension Host] %cdebugger inspector at devtools://devtools/bundled/inspector.html?experiments=true&v8only=true&ws=127.0.0.1 color: blue color:", source: vscode-file://vscode-app/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/out/vs/workbench/services/extensions/electron-browser/localProcessExtensionHost.js (209)
+[13390:0721/114929.713521:INFO:CONSOLE(98)] "%c[Extension Host] %cCurvable AI Assistant is now active! %c(at console.<anonymous> (file:///Users/manavidubey/Desktop/curvable/vs/curvable/vscode/out/vs/workbench/api/common/extHostConsoleForwarder.js:45:22)) color: blue color:  color: grey", source: vscode-file://vscode-app/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/out/vs/base/common/console.js (98)
+[13390:0721/114930.242506:INFO:CONSOLE(352)] "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.", source: vscode-file://vscode-app/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/out/vs/workbench/contrib/webview/browser/webviewElement.js (352)
+[13390:0721/122506.334969:INFO:CONSOLE(253)] "%c  ERR color: #f33 [Extension Host] Error calling OpenRouter API: Error: API request failed: 402 Payment Required - {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 1000 tokens, but can only afford 884. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account","code":402,"metadata":{"provider_name":null}},"user_id":"user_2woD7KwoqmLMrfOV0zaxjsjacV6"}
+	at AIService.callOpenRouterAPI (/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/extensions/curvable-ai-assistant/out/aiService.js:684:19)
+	at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+	at async AIService.chat (/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/extensions/curvable-ai-assistant/out/aiService.js:50:30)
+	at async UniqueContainer.value (/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/extensions/curvable-ai-assistant/out/extension.js:300:42)", source: vscode-file://vscode-app/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/out/vs/platform/log/common/log.js (253)
+[13390:0721/122506.335753:INFO:CONSOLE(98)] "%c[Extension Host] %cError calling OpenRouter API: color: blue color:  Error: API request failed: 402 Payment Required - {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 1000 tokens, but can only afford 884. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account","code":402,"metadata":{"provider_name":null}},"user_id":"user_2woD7KwoqmLMrfOV0zaxjsjacV6"}
+	at AIService.callOpenRouterAPI (/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/extensions/curvable-ai-assistant/out/aiService.js:684:19)
+	at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+	at async AIService.chat (/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/extensions/curvable-ai-assistant/out/aiService.js:50:30)
+	at async UniqueContainer.value (/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/extensions/curvable-ai-assistant/out/extension.js:300:42) (at console.<anonymous> (file:///Users/manavidubey/Desktop/curvable/vs/curvable/vscode/out/vs/workbench/api/common/extHostConsoleForwarder.js:45:22))", source: vscode-file://vscode-app/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/out/vs/base/common/console.js (98)
+[13390:0721/122510.817918:INFO:CONSOLE(253)] "%c  ERR color: #f33 [Extension Host] Error calling OpenRouter API: Error: API request failed: 402 Payment Required - {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 1000 tokens, but can only afford 884. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account","code":402,"metadata":{"provider_name":null}},"user_id":"user_2woD7KwoqmLMrfOV0zaxjsjacV6"}
+	at AIService.callOpenRouterAPI (/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/extensions/curvable-ai-assistant/out/aiService.js:684:19)
+	at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+	at async AIService.chat (/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/extensions/curvable-ai-assistant/out/aiService.js:50:30)
+	at async UniqueContainer.value (/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/extensions/curvable-ai-assistant/out/extension.js:300:42)", source: vscode-file://vscode-app/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/out/vs/platform/log/common/log.js (253)
+[13390:0721/122510.818086:INFO:CONSOLE(98)] "%c[Extension Host] %cError calling OpenRouter API: color: blue color:  Error: API request failed: 402 Payment Required - {"error":{"message":"This request requires more credits, or fewer max_tokens. You requested up to 1000 tokens, but can only afford 884. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account","code":402,"metadata":{"provider_name":null}},"user_id":"user_2woD7KwoqmLMrfOV0zaxjsjacV6"}
+	at AIService.callOpenRouterAPI (/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/extensions/curvable-ai-assistant/out/aiService.js:684:19)
+	at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+	at async AIService.chat (/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/extensions/curvable-ai-assistant/out/aiService.js:50:30)
+	at async UniqueContainer.value (/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/extensions/curvable-ai-assistant/out/extension.js:300:42) (at console.<anonymous> (file:///Users/manavidubey/Desktop/curvable/vs/curvable/vscode/out/vs/workbench/api/common/extHostConsoleForwarder.js:45:22))", source: vscode-file://vscode-app/Users/manavidubey/Desktop/curvable/vs/curvable/vscode/out/vs/base/common/console.js (98)
+[13432:0721/183239.611837:WARNING:dns_config_service_posix.cc(203)] Failed to read DnsConfig.
+[13390:0721/183239.611887:WARNING:dns_config_service_posix.cc(203)] Failed to read DnsConfig.
+[13432:0721/183239.945329:WARNING:dns_config_service_posix.cc(203)] Failed to read DnsConfig.
+[13390:0721/183239.945426:WARNING:dns_config_service_posix.cc(203)] Failed to read DnsConfig.
+[13390:0721/224349.155290:WARNING:dns_config_service_posix.cc(203)] Failed to read DnsConfig.
+[13432:0721/224349.155807:WARNING:dns_config_service_posix.cc(203)] Failed to read DnsConfig.
+[13432:0721/224349.460922:WARNING:dns_config_service_posix.cc(203)] Failed to read DnsConfig.
+[13390:0721/224349.460922:WARNING:dns_config_service_posix.cc(203)] Failed to read DnsConfig.

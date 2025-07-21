@@ -1,0 +1,261 @@
+{
+  "name": "curvable-ai-assistant",
+  "displayName": "Curvable AI Assistant",
+  "description": "Next-generation AI-powered coding assistant with memory, intent tracking, and cross-IDE support",
+  "version": "1.0.0",
+  "publisher": "curvable",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.5.0"
+  },
+  "icon": "media/icon.png",
+  "capabilities": {
+    "virtualWorkspaces": true,
+    "untrustedWorkspaces": {
+      "supported": true
+    }
+  },
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:curvable-ai-assistant.openChat",
+    "onCommand:curvable-ai-assistant.explainCode",
+    "onCommand:curvable-ai-assistant.generateCode",
+    "onCommand:curvable-ai-assistant.createFile",
+    "onCommand:curvable-ai-assistant.createDirectory",
+    "onCommand:curvable-ai-assistant.analyzeProject",
+    "onCommand:curvable-ai-assistant.suggestActions",
+    "onCommand:curvable-ai-assistant.analyzeSelectedCode",
+    "onCommand:curvable-ai-assistant.readSelectedCode",
+    "onCommand:curvable-ai-assistant.listDirectory",
+    "onCommand:curvable-ai-assistant.moveFile",
+    "onCommand:curvable-ai-assistant.copyFile",
+    "onCommand:curvable-ai-assistant.testFileCreation",
+    "onCommand:curvable-ai-assistant.comprehensiveTest",
+    "onCommand:curvable-ai-assistant.createReactComponent",
+    "onCommand:curvable-ai-assistant.createProjectStructure",
+    "onCommand:curvable-ai-assistant.readProjectFiles",
+    "onCommand:curvable-ai-assistant.chatWithFiles",
+    "onCommand:curvable-ai-assistant.findRelevantFiles",
+    "onCommand:curvable-ai-assistant.checkAPIStatus"
+  ],
+  "main": "./out/extension",
+  "scripts": {
+    "compile": "gulp compile-extension:curvable-ai-assistant",
+    "watch": "gulp watch-extension:curvable-ai-assistant",
+    "test": "node ./out/test/runTest.js"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "curvable-ai-assistant.openChat",
+        "title": "Curvable AI: Open Chat",
+        "category": "Curvable AI"
+      },
+      {
+        "command": "curvable-ai-assistant.explainCode",
+        "title": "Curvable AI: Explain Code",
+        "category": "Curvable AI"
+      },
+      {
+        "command": "curvable-ai-assistant.generateCode",
+        "title": "Curvable AI: Generate Code",
+        "category": "Curvable AI"
+      },
+      {
+        "command": "curvable-ai-assistant.createFile",
+        "title": "Curvable AI: Create File",
+        "category": "Curvable AI"
+      },
+      {
+        "command": "curvable-ai-assistant.createDirectory",
+        "title": "Curvable AI: Create Directory",
+        "category": "Curvable AI"
+      },
+      {
+        "command": "curvable-ai-assistant.analyzeProject",
+        "title": "Curvable AI: Analyze Project",
+        "category": "Curvable AI"
+      },
+      {
+        "command": "curvable-ai-assistant.suggestActions",
+        "title": "Curvable AI: Suggest Actions",
+        "category": "Curvable AI"
+      },
+      {
+        "command": "curvable-ai-assistant.analyzeSelectedCode",
+        "title": "Curvable AI: Analyze Selected Code",
+        "category": "Curvable AI"
+      },
+      {
+        "command": "curvable-ai-assistant.readSelectedCode",
+        "title": "Curvable AI: Read Selected Code",
+        "category": "Curvable AI"
+      },
+      {
+        "command": "curvable-ai-assistant.listDirectory",
+        "title": "Curvable AI: List Directory",
+        "category": "Curvable AI"
+      },
+      {
+        "command": "curvable-ai-assistant.moveFile",
+        "title": "Curvable AI: Move File",
+        "category": "Curvable AI"
+      },
+      {
+        "command": "curvable-ai-assistant.copyFile",
+        "title": "Curvable AI: Copy File",
+        "category": "Curvable AI"
+      },
+      {
+        "command": "curvable-ai-assistant.testFileCreation",
+        "title": "Curvable AI: Test File Creation",
+        "category": "Curvable AI"
+      },
+      {
+        "command": "curvable-ai-assistant.comprehensiveTest",
+        "title": "Curvable AI: Comprehensive File Test",
+        "category": "Curvable AI"
+      },
+      {
+        "command": "curvable-ai-assistant.createReactComponent",
+        "title": "Curvable AI: Create React Component",
+        "category": "Curvable AI"
+      },
+      {
+        "command": "curvable-ai-assistant.createProjectStructure",
+        "title": "Curvable AI: Create Project Structure",
+        "category": "Curvable AI"
+      },
+      {
+        "command": "curvable-ai-assistant.readProjectFiles",
+        "title": "Curvable AI: Read Project Files",
+        "category": "Curvable AI"
+      },
+      {
+        "command": "curvable-ai-assistant.chatWithFiles",
+        "title": "Curvable AI: Chat with Files",
+        "category": "Curvable AI"
+      },
+      {
+        "command": "curvable-ai-assistant.findRelevantFiles",
+        "title": "Curvable AI: Find Relevant Files",
+        "category": "Curvable AI"
+      },
+      {
+        "command": "curvable-ai-assistant.checkAPIStatus",
+        "title": "Curvable AI: Check API Status",
+        "category": "Curvable AI"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "curvable-ai-assistant.openChat",
+          "when": "true"
+        },
+        {
+          "command": "curvable-ai-assistant.explainCode",
+          "when": "editorHasSelection"
+        },
+        {
+          "command": "curvable-ai-assistant.generateCode",
+          "when": "true"
+        },
+        {
+          "command": "curvable-ai-assistant.createFile",
+          "when": "true"
+        },
+        {
+          "command": "curvable-ai-assistant.analyzeProject",
+          "when": "workspaceFolderCount > 0"
+        },
+        {
+          "command": "curvable-ai-assistant.suggestActions",
+          "when": "true"
+        },
+        {
+          "command": "curvable-ai-assistant.analyzeSelectedCode",
+          "when": "editorHasSelection"
+        },
+        {
+          "command": "curvable-ai-assistant.readSelectedCode",
+          "when": "editorHasSelection"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "curvable-ai-assistant.explainCode",
+          "when": "editorHasSelection",
+          "group": "curvable-ai@1"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "curvable-ai-sidebar",
+          "title": "Curvable AI",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "curvable-ai-sidebar": [
+        {
+          "id": "curvable-ai-chat",
+          "name": "AI Chat",
+          "type": "webview"
+        },
+        {
+          "id": "curvable-ai-memory",
+          "name": "Memory & Intent",
+          "type": "webview"
+        },
+        {
+          "id": "curvable-ai-learning",
+          "name": "Learning Mode",
+          "type": "webview"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Curvable AI Assistant",
+      "properties": {
+        "curvable-ai.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable Curvable AI Assistant"
+        },
+        "curvable-ai.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "API Key for Curvable AI services"
+        },
+        "curvable-ai.learningMode": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable learning mode with explanations"
+        },
+        "curvable-ai.memoryEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable intent memory across sessions"
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/node": "22.x",
+    "@types/vscode": "^1.5.0"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "arrowParens": "avoid"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/curvable-ai/curvable.git"
+  }
+} 
