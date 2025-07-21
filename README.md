@@ -1,223 +1,207 @@
-# Test Project - Curvable AI Assistant Demo
+# 🚀 Curvable AI Assistant - VS Code Extension
 
-A comprehensive demonstration project showcasing all Curvable AI Assistant features with a full-featured Express.js REST API.
+A powerful AI-powered coding assistant integrated into VS Code with comprehensive file operations, project analysis, and intelligent error handling.
 
-## 🚀 Project Overview
+## ✨ Features
 
-This project demonstrates a complete e-commerce API with user management, product catalog, and order processing. It's designed to showcase the AI assistant's ability to analyze complex codebases, understand relationships between files, and provide intelligent suggestions.
+### 🤖 **AI-Powered Assistance**
+- **Smart Code Analysis** - Analyze selected code with AI explanations
+- **Context-Aware Responses** - AI understands your project structure
+- **Intelligent Suggestions** - Get actionable code improvements
+- **File Content Analysis** - AI reads and analyzes project files
+
+### 📁 **Comprehensive File Operations**
+- **Create Files & Folders** - AI-suggested file creation with content
+- **Delete Operations** - Safe file and directory deletion
+- **Move & Copy Files** - Intelligent file organization
+- **Project Structure** - Complete project setup automation
+
+### 🔧 **Enhanced Error Handling**
+- **API Credit Management** - Graceful handling of API limitations
+- **Fallback Responses** - Helpful alternatives when AI is unavailable
+- **Status Monitoring** - Real-time API connectivity checks
+- **User-Friendly Messages** - Clear error explanations and solutions
+
+### 📊 **Project Analysis**
+- **Structure Visualization** - Complete project hierarchy analysis
+- **File Discovery** - Find relevant files based on queries
+- **Content Reading** - Read and analyze multiple files simultaneously
+- **Relevance Scoring** - AI-powered file importance ranking
+
+## 🛠️ Installation
+
+### Prerequisites
+- VS Code 1.60.0 or higher
+- OpenRouter API key (for AI features)
+
+### Setup
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/manavidubey-ds/curvable-vscode-extension.git
+   cd curvable-vscode-extension
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Compile the extension:**
+   ```bash
+   npm run compile
+   ```
+
+4. **Open in VS Code:**
+   ```bash
+   code .
+   ```
+
+5. **Press F5** to launch the extension in a new VS Code window
+
+## 🎯 Usage
+
+### Available Commands
+
+#### **AI Assistant Commands**
+- `Curvable AI: Open Chat` - Open AI chat interface
+- `Curvable AI: Analyze Selected Code` - Analyze highlighted code
+- `Curvable AI: Read Selected Code` - Read and explain selected code
+- `Curvable AI: Suggest Actions` - Get AI-suggested file operations
+
+#### **File Operations**
+- `Curvable AI: Create Project Structure` - Set up complete project structure
+- `Curvable AI: Create React Component` - Generate React components
+- `Curvable AI: Test File Creation` - Test file operations
+- `Curvable AI: Comprehensive File Test` - Full file system test
+
+#### **Project Analysis**
+- `Curvable AI: Read Project Files` - Read and display file contents
+- `Curvable AI: Find Relevant Files` - Locate files based on queries
+- `Curvable AI: Chat with Files` - AI analysis with file context
+
+#### **System Commands**
+- `Curvable AI: Check API Status` - Monitor API connectivity
+- `Curvable AI: List Directory` - Browse project structure
+- `Curvable AI: Move File` - Move files between locations
+- `Curvable AI: Copy File` - Copy files with metadata
+
+### API Configuration
+
+1. **Get OpenRouter API Key:**
+   - Visit [OpenRouter](https://openrouter.ai/)
+   - Create an account and get your API key
+
+2. **Configure the Extension:**
+   - Open VS Code settings
+   - Search for "Curvable AI"
+   - Enter your OpenRouter API key
+
+## 🔧 Error Handling
+
+### API Credit Issues
+When you encounter API credit limitations:
+
+1. **Check Status:** Use "Curvable AI: Check API Status"
+2. **Alternative Commands:** Use file operations that don't require AI
+3. **Upgrade Account:** Visit [OpenRouter Credits](https://openrouter.ai/settings/credits)
+
+### Fallback Features
+Even without AI, these features work:
+- ✅ File creation and deletion
+- ✅ Project structure analysis
+- ✅ File reading and discovery
+- ✅ Directory operations
 
 ## 📁 Project Structure
 
 ```
-test-project/
-├── package.json              # Project configuration and dependencies
-├── README.md                # This comprehensive documentation
-├── src/
-│   ├── index.js             # Main application entry point with Express server
-│   ├── utils/
-│   │   └── helpers.js       # Utility functions for validation, calculations, etc.
-│   ├── routes/
-│   │   ├── users.js         # User management API endpoints
-│   │   └── products.js      # Product catalog API endpoints
-│   └── models/              # Data models (future expansion)
+curvable-vscode-extension/
+├── curvable/
+│   └── vscode/
+│       └── extensions/
+│           └── curvable-ai-assistant/
+│               ├── src/
+│               │   ├── aiService.ts          # AI integration
+│               │   ├── extension.ts          # Main extension
+│               │   ├── chatProvider.ts       # Chat UI
+│               │   └── webview/              # Webview components
+│               ├── package.json              # Extension manifest
+│               └── README.md                 # Extension docs
+├── src/                                      # Test project files
+├── package.json                              # Root package.json
+└── README.md                                 # This file
 ```
 
-## 🛠️ Technology Stack
+## 🧪 Testing
 
-- **Runtime**: Node.js (v18+)
-- **Framework**: Express.js
-- **Security**: Helmet, CORS
-- **Validation**: Custom validation functions
-- **Documentation**: JSDoc comments throughout
+### Test Project
+A complete test project is included in the repository:
 
-## 🔧 Features
-
-### Core API Features
-- **User Management**: CRUD operations with validation
-- **Product Catalog**: Full product management with filtering
-- **Order Processing**: Complete order workflow with calculations
-- **Security**: Input validation, error handling, security headers
-- **Pagination**: Built-in pagination for all list endpoints
-- **Search & Filtering**: Advanced search capabilities
-
-### Technical Features
-- **Comprehensive Error Handling**: Try-catch blocks with detailed error messages
-- **Input Validation**: Robust validation for all user inputs
-- **Request Logging**: Automatic request logging middleware
-- **Health Monitoring**: Detailed health check endpoint
-- **API Documentation**: Self-documenting API responses
-
-## 📚 API Endpoints
-
-### Main Endpoints
-- `GET /` - API documentation and endpoint information
-- `GET /health` - System health check with detailed metrics
-
-### User Management (`/api/users`)
-- `GET /api/users` - List users with filtering and pagination
-- `GET /api/users/:id` - Get specific user
-- `POST /api/users` - Create new user
-- `PUT /api/users/:id` - Update user
-- `DELETE /api/users/:id` - Delete user
-- `GET /api/users/stats/overview` - User statistics
-- `GET /api/users/roles/list` - Available user roles
-
-### Product Management (`/api/products`)
-- `GET /api/products` - List products with filtering and pagination
-- `GET /api/products/:id` - Get specific product
-- `POST /api/products` - Create new product
-- `PUT /api/products/:id` - Update product
-- `DELETE /api/products/:id` - Delete product
-- `GET /api/products/categories/list` - Available categories
-- `POST /api/products/:id/discount` - Calculate product discount
-
-### Order Processing (`/api/order`)
-- `POST /api/order` - Process order with validation and calculations
-
-## 🎯 Testing with Curvable AI Assistant
-
-This project is specifically designed to test various AI assistant capabilities:
-
-### 1. **Project Structure Analysis**
-- Use command: `"Curvable AI: Analyze Project"`
-- AI will analyze the entire codebase structure
-- Provides insights about organization and architecture
-
-### 2. **Code Analysis**
-- Select any function and click "🔍 Analyze Code" button
-- AI analyzes selected code with detailed explanations
-- Suggests improvements and best practices
-
-### 3. **Function Understanding**
-- Select functions like `calculateTotal()`, `validateUser()`, etc.
-- Ask: "What does this function do?"
-- AI explains purpose, parameters, and usage
-
-### 4. **Code Flow Analysis**
-- Ask: "How does the order processing work?"
-- AI explains the flow between different files and functions
-- Shows relationships between components
-
-### 5. **File Creation & Modification**
-- Ask: "Create a new endpoint for inventory management"
-- AI suggests new files and code structure
-- Can modify existing files with improvements
-
-### 6. **Error Analysis**
-- Select error handling code
-- Ask: "How can I improve this error handling?"
-- AI provides suggestions for better error management
-
-## 🔍 Example Code to Analyze
-
-### Helper Functions (`src/utils/helpers.js`)
-- `calculateTotal()` - Complex array reduction with validation
-- `validateUser()` - Comprehensive input validation
-- `validateProduct()` - Product-specific validation
-- `formatCurrency()` - Internationalization example
-- `calculateDiscount()` - Business logic implementation
-
-### API Routes (`src/routes/`)
-- `users.js` - Complete CRUD with filtering and pagination
-- `products.js` - Advanced product management with search
-
-### Main Application (`src/index.js`)
-- Express server setup with middleware
-- Order processing logic
-- Error handling middleware
-- Comprehensive logging
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js v18 or higher
-- npm or yarn package manager
-
-### Installation
 ```bash
-# Clone or navigate to the project
-cd test-project
-
-# Install dependencies
+cd ~/Desktop/test-project
 npm install
-
-# Start the server
 npm start
-
-# For development with auto-restart
-npm run dev
 ```
 
-### Testing the API
+### Available Test Commands
+- **File Operations Test** - Comprehensive file system testing
+- **API Connectivity Test** - Verify AI service connectivity
+- **Project Analysis Test** - Test project structure analysis
+- **Error Handling Test** - Verify fallback mechanisms
+
+## 🔄 Development
+
+### Building
 ```bash
-# Health check
-curl http://localhost:3000/health
-
-# Get API documentation
-curl http://localhost:3000/
-
-# List users
-curl http://localhost:3000/api/users
-
-# List products
-curl http://localhost:3000/api/products
+npm run compile
 ```
 
-## 🎨 AI Assistant Testing Scenarios
-
-### Scenario 1: Function Analysis
-1. Open `src/utils/helpers.js`
-2. Select the `calculateTotal()` function
-3. Click "🔍 Analyze Code" button
-4. AI explains the function's purpose and suggests improvements
-
-### Scenario 2: Project Understanding
-1. Ask in chat: "Explain the project structure"
-2. AI analyzes all files and explains the architecture
-3. Shows relationships between different components
-
-### Scenario 3: Code Flow Analysis
-1. Ask: "How does order processing work?"
-2. AI traces the flow from API endpoint to helper functions
-3. Explains the complete workflow
-
-### Scenario 4: File Creation
-1. Ask: "Create a new endpoint for order history"
-2. AI suggests new route file and modifications
-3. Provides complete implementation
-
-### Scenario 5: Code Improvement
-1. Select any validation function
-2. Ask: "How can I improve this validation?"
-3. AI suggests better error handling and validation patterns
-
-## 📊 Project Metrics
-
-- **Files**: 5 main files
-- **Functions**: 15+ utility functions
-- **API Endpoints**: 20+ endpoints
-- **Validation Rules**: 10+ validation functions
-- **Error Handling**: Comprehensive error management
-
-## 🔧 Development Commands
-
+### Watching for Changes
 ```bash
-npm start          # Start production server
-npm run dev        # Start development server with nodemon
-npm test           # Run tests (when implemented)
-npm run lint       # Run ESLint (when configured)
-npm run build      # Build for production (when configured)
+npm run watch
 ```
 
-## 🎯 AI Assistant Features Demonstrated
+### Testing
+```bash
+npm test
+```
 
-- ✅ **Selected Code Reading** - AI reads and analyzes selected code
-- ✅ **Project Structure Analysis** - AI understands the entire codebase
-- ✅ **Code Flow Explanation** - AI explains how components work together
-- ✅ **Function Analysis** - AI analyzes individual functions
-- ✅ **File Creation** - AI can create new files and modify existing ones
-- ✅ **Error Analysis** - AI suggests improvements for error handling
-- ✅ **Best Practices** - AI recommends coding standards and patterns
-- ✅ **Context Awareness** - AI understands relationships between files
+## 🤝 Contributing
 
-This project provides a comprehensive testing environment for all Curvable AI Assistant features! 🚀 
+1. **Fork the repository**
+2. **Create a feature branch:** `git checkout -b feature/amazing-feature`
+3. **Commit your changes:** `git commit -m 'Add amazing feature'`
+4. **Push to the branch:** `git push origin feature/amazing-feature`
+5. **Open a Pull Request**
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **VS Code Extension API** - For the excellent extension framework
+- **OpenRouter** - For providing AI model access
+- **Claude 3.5 Sonnet** - For intelligent code analysis
+- **Community Contributors** - For feedback and improvements
+
+## 📞 Support
+
+- **Issues:** [GitHub Issues](https://github.com/manavidubey-ds/curvable-vscode-extension/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/manavidubey-ds/curvable-vscode-extension/discussions)
+- **Documentation:** [Wiki](https://github.com/manavidubey-ds/curvable-vscode-extension/wiki)
+
+## 🚀 Roadmap
+
+- [ ] **Multi-language Support** - Support for more programming languages
+- [ ] **Advanced Code Generation** - Template-based code generation
+- [ ] **Integration APIs** - Connect with external development tools
+- [ ] **Performance Optimization** - Faster file operations and AI responses
+- [ ] **Custom Models** - Support for custom AI models
+- [ ] **Team Collaboration** - Shared project analysis and suggestions
+
+---
+
+**Made with ❤️ by the Curvable Team**
+
+*Transform your coding experience with AI-powered assistance!* 
